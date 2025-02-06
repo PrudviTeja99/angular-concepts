@@ -1,0 +1,12 @@
+<div>
+    <label>Value from Parent in child</label>
+    <div>
+        {{childvalue}}
+    </div>
+</div>
+
+<div>
+    <label>Send Value from Child to Parent</label>
+    <input type="text" #child>
+    <button (click)="sendValue(child.value)">Child value</button>
+</div>

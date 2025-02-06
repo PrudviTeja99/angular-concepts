@@ -1,0 +1,10 @@
+<div>
+    <label>Parent Component</label>
+    <input type="text" #value>
+    <button (click)="sendText(value.value)">Click</button>
+</div>
+
+<app-child [childvalue]="parentvalue" (childEventEmitter)="fromChild($event)"></app-child>
+<div>
+   Value from child {{childvalue}}
+</div>
